@@ -1,0 +1,24 @@
+<div class="add-feedback">
+  <%= link_to "Ajouter un témoignage", new_user_feedback_path, class: "btn btn-primary" %>
+</div>
+
+
+<% @feedbacks.reverse_each do |feedback| %>
+  <div class="feedback">
+    <div class="rating">
+      <% feedback.rating.times do %>
+        <i class="fa fa-star"></i>
+      <% end %>
+    </div>
+    <p><strong>Commentaire : </strong><%= feedback.comment %></p>
+    <p><strong>De : </strong><%= feedback.name %></p>
+    <% if feedback.user == current_user %>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-bars"></i></button>
+        <div class="dropdown-content">
+          <a href="<%= edit_user_feedback_path(feedback.user, feedback) %>"><i class="fas fa-pencil-alt"></i>  Modifier</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

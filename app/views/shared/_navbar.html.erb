@@ -1,0 +1,26 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+
+     <a href="/"><h1 class= "home-title"> Bnfique</h1></a>
+       <div class="nav-1">
+    <ul class="list-inline tabs-underlined">
+        <% if user_signed_in? %>
+      <li>
+        <%= link_to "Accueil", root_path, class: "tab-underlined active" %>
+      </li>
+      <li>
+        <%= link_to "Massages", massages_path, class: "tab-underlined active" %>
+      </li>
+      <li>
+        <%= link_to "Témoignage", user_feedbacks_path(current_user), class: "tab-underlined active" %>
+      </li>
+
+    </ul>
+
+          <%= button_to "Déconnexion", destroy_user_session_path, method: :delete, class:"tab-underlined active" %>
+        <% else %>
+          <%= link_to "Se connecter", new_user_session_path, class:"tab-underlined active" %> ou <%= link_to "S'enregistrer", new_user_registration_path, class:"tab-underlined active" %>
+        <% end %>
+    </div>
+  </div>
+</div>

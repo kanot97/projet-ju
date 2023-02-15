@@ -1,0 +1,27 @@
+<%# <%= link_to "Crée un nouveau massage", new_massage_path %>  <br> 
+<div>
+  <% @massages.each do |massage| %>
+    <div class="massage-card">
+      <div class="massage-card__content">
+        <h2 class="massage-card__title">
+          <%= massage.title %>
+        </h2>
+        <p class="massage-card__description">
+          <strong> Description:</strong> <br>
+          <%= massage.description %>
+        </p>
+          <div class="massage-card__price-time">
+            <p class="massage-card__time">Durée :
+            <%= massage.time.strftime("%H:%M") %> heure</p>
+            <strong><p class="massage-card__price">Prix :
+            <%= massage.price %>€</p></strong>
+
+          </div>
+          <%= link_to "Réserver", massage, class: "btn btn-flat" %>
+          <%# <%= #link_to "Modifier un massage", edit_massage_path(massage) %>
+      </div>
+    </div>
+  <% end %>
+    </div>
+  </div>
+</div><br>

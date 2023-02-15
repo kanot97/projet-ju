@@ -1,0 +1,7 @@
+<%= simple_form_for @massage do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.datetime_select :time, { ampm: true, minute_step: 15 } %>
+  <%= f.submit "Create Massage", class: "btn btn-primary" %>
+<% end %>

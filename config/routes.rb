@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'feedbacks/new'
+  get 'feedbacks/create'
+  devise_for :users
   root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :bookings
+  resources :massages
+  resources :users do
+    resources :feedbacks, only: [:new, :create, :index, :destroy, :edit, :update]
+  end
 end

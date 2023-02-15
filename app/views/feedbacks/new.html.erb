@@ -1,0 +1,15 @@
+<div class="form-inputs">
+  <%= simple_form_for [@user, @feedback] do |f| %>
+    <%= f.input :name, label: :Nom %>
+    <%= f.input :comment, label: :Commentaire %>
+
+  <div class="star-rating">
+    <% (1..5).reverse_each do |star| %>
+      <input type="radio" id="star-<%= star %>" name="feedback[rating]" value="<%= star %>" <%= "checked" if star == @feedback.rating %> />
+      <label for="star-<%= star %>">&#9733;</label>
+    <% end %>
+  </div>
+
+    <%= f.submit "Laisser un avis", class: "btn1" %>
+<% end %>
+</div>

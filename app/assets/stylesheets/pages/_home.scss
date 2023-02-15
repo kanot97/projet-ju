@@ -1,1 +1,140 @@
 // Specific CSS for your home-page
+// Specific CSS for your home-page
+
+
+/* Styles de la page d'accueil */
+
+
+
+.image-1{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 40px;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center ;
+  margin-bottom: 100px;
+
+}
+
+
+.card1 {
+  display: flex;
+  width: 250px;
+  height: 300px;
+  margin: 20px;
+  margin-top: 40px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.2);
+  transition: all 0.5s ease;
+  :hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.20), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+}
+
+.img-card{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.me{
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+.undertitle{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.card-products{
+  display: flex;
+}
+
+.card-product {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: #F4DFBA;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  overflow: hidden;
+  transition: all 0.5s ease;
+  width: 300px;
+  height: 400px;
+}
+
+.card-product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.19), 0 15px 12px rgba(0,0,0,0.23);
+}
+.card-product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-img-top{
+  border-radius: 5% 5% 0 0;
+  height: 400px;
+}
+.title{
+  text-align: center;
+  justify-content: center;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.btn1 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #876445;
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  }
+
+  .btn1:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.20), 0 6px 6px rgba(0,0,0,0.23);
+  color: white;
+  }

@@ -10,3 +10,22 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "massages/index";
+@import 'feedbacks/index';
+
+body{
+  background-color: #F4EFCB;
+}
+
+.form-inputs{
+  margin: 0 auto;
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  margin-bottom: 70px;
+}
+.form{
+  flex-direction: column;
+}

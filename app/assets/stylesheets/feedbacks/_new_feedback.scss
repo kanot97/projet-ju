@@ -1,0 +1,34 @@
+.form-inputs{
+  margin: 0 auto;
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  margin-bottom: 70px;
+}
+.form{
+  flex-direction: column;
+}
+
+
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    direction: ltr;
+  }
+
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+
+  .star-rating label {
+    cursor: pointer;
+    color: #bbb;
+    font-size: 3em;
+    margin: 0 10px;
+  }
+
+  .star-rating input[type="radio"]:checked ~ label {
+    color: #f2b600;
+  }
